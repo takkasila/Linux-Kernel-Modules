@@ -12,7 +12,8 @@ int simple_init(void)
 
 	for_each_process(task)
 	{
-		printk(KERN_INFO "Processs name: %s | id: %d | state: %ld", task->comm, task->pid, task->state);
+		printk(KERN_INFO "Processs name: %s | id: %d | state: %ld"
+			, task->comm, task->pid, task->state);
 	}
 
 	printk(KERN_INFO "Loaded Module\n");

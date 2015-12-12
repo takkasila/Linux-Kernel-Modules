@@ -21,7 +21,8 @@ void dfs(struct task_struct *task, int dept)
 		for(;i<dept;i++)
 			space[i] =" ";
 
-		printk(KERN_INFO "%sProcesses name: %s | id: %d | state: %ld", space, child_task->comm, child_task->pid, child_task->state);
+		printk(KERN_INFO "%sProcesses name: %s | id: %d | state: %ld"
+			, space, child_task->comm, child_task->pid, child_task->state);
 		dfs(child_task, dept+1);
 
 	}

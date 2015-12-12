@@ -57,8 +57,6 @@ void simple_exit(void)
 		list_del(&bth_ptr->list);
 		kfree(bth_ptr);
 	}
-	
-	// kfree(bth_ptr);
 
 	printk(KERN_INFO "Removed Module\n");
 }
